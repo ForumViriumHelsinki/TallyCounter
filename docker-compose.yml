@@ -3,9 +3,9 @@ version: '3.7'
 services:
   web:
     build: ./django_server
-    command: gunicorn tally_counter.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn tally_counter.wsgi:application --bind 0.0.0.0:28001
     ports:
-      - 8000:8000
+      - 28001:28001
     env_file:
       - ./.env
     depends_on:
@@ -20,7 +20,7 @@ services:
     env_file:
       - ./.env
     ports:
-      - 5432:5432
+      - 5433:5433
 
   react:
     build: ./react_ui
