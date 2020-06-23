@@ -4,8 +4,7 @@ services:
   web:
     build: ./django_server
     command: gunicorn tally_counter.wsgi:application --bind 0.0.0.0:28001
-    ports:
-      - 28001:28001
+    network_mode: host
     env_file:
       - ./.env
     depends_on:
