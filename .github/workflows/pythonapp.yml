@@ -1,4 +1,4 @@
-name: $PROJECT_NAME tests CI
+name: Tally Counter tests CI
 
 on: [push]
 
@@ -11,9 +11,9 @@ jobs:
       postgres:
         image: postgres:12
         env:
-          POSTGRES_DB: $PROJECT_SLUG
-          POSTGRES_USER: $PROJECT_SLUG
-          POSTGRES_PASSWORD: $PROJECT_SLUG
+          POSTGRES_DB: tally_counter
+          POSTGRES_USER: tally_counter
+          POSTGRES_PASSWORD: tally_counter
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5

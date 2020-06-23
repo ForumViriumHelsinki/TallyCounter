@@ -2,6 +2,6 @@ from django.contrib import admin
 
 
 class AdminSite(admin.AdminSite):
-    site_header = '$PROJECT_NAME Admin'
-    site_title = '$PROJECT_NAME Admin'
+    site_header = 'Tally Counter Admin'
+    site_title = 'Tally Counter Admin'
     site_url = None

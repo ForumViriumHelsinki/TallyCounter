@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     build: ./django_server
-    command: gunicorn $PROJECT_SLUG.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn tally_counter.wsgi:application --bind 0.0.0.0:8000
     ports:
       - 8000:8000
     env_file:
@@ -19,6 +19,8 @@ services:
       - ./postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+    ports:
+      - 5432:5432
 
   react:
     build: ./react_ui

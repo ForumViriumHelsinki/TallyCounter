@@ -1,4 +1,4 @@
-"""$PROJECT_SLUG URL Configuration
+"""tally_counter URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -18,9 +18,11 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from rest_framework.schemas import get_schema_view
 
+from .views import router
+
 schema_view = get_schema_view(
-    title="$PROJECT_NAME API",
-    description="API for interacting with the $PROJECT_NAME application",
+    title="Tally Counter API",
+    description="API for interacting with the Tally Counter application",
     version="1.0.0", public=True)
 
 
@@ -32,4 +34,4 @@ urlpatterns = [
         template_name='swagger-ui.html',
         extra_context={'schema_url': 'openapi-schema'}
     ), name='swagger-ui')
-]
+] + router.urls

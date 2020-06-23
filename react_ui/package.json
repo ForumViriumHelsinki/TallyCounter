@@ -1,8 +1,8 @@
 {
-  "name": "$PROJECT_SLUG",
+  "name": "tally_counter",
   "version": "0.1.0",
   "private": true,
-  "description": "UI for the $PROJECT_NAME application",
+  "description": "UI for the Tally Counter application",
   "scripts": {
     "start": "react-scripts start --no-cache",
     "build": "react-scripts build",
@@ -17,7 +17,8 @@
     "bootstrap": "^4.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
+    "react-scripts": "^3.4.1",
+    "reactstrap": "^8.4.1",
     "sass": "^1.23.7",
     "typescript": "^3.7.4"
   },
