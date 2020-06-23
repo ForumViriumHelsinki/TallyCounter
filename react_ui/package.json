@@ -7,7 +7,8 @@
     "start": "react-scripts start --no-cache",
     "build": "react-scripts build",
     "test": "react-scripts test --no-cache",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && rsync -rz --delete build/* root@docker.fvh.io:/site/tally.fvh.io/www/"
   },
   "author": "Forum Virium Helsinki",
   "dependencies": {

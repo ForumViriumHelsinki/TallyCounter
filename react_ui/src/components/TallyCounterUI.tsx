@@ -39,7 +39,7 @@ export default class TallyCounterUI extends React.Component<TallyCounterUIProps>
   }
 
   loadSubjects() {
-    sessionRequest('/tally_subjects/').then(response => {
+    sessionRequest('/api/tally_subjects/').then(response => {
       if (response.status >= 400) this.setState({status: 'error'});
       else response.json().then(subjects =>
         this.setState({
@@ -80,7 +80,7 @@ export default class TallyCounterUI extends React.Component<TallyCounterUIProps>
 
   changeCounter(increment: number) {
     const subject = this.getSubject();
-    sessionRequest(`/tally_subjects/${subject.id}/count/`,
+    sessionRequest(`/api/tally_subjects/${subject.id}/count/`,
       {method: 'PUT', data: {count: subject.count + increment}})
       .then(response => {
         if (response.status >= 400) this.setState({status: 'error'});
