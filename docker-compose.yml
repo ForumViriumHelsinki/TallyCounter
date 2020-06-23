@@ -19,7 +19,7 @@ services:
     env_file:
       - ./.env
     ports:
-      - 5433:5433
+      - 5433:5432
 
   react:
     build: ./react_ui
